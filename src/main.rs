@@ -1,14 +1,15 @@
 fn fizzbuzz(num:u8) -> String {
-	if num % 15 == 0 {
-		return String::from("fizzbuzz");
-	}
+	let mut retval: String = String::from("");
 	if num % 3 == 0 {
-		return String::from("fizz");
+		retval.push_str(&String::from("fizz"));
 	}
 	if num % 5 == 0 {
-		return String::from("buzz");
+		retval.push_str(&String::from("buzz"));
 	}
-	return num.to_string();
+	if retval.len() == 0 {
+		retval.push_str(&num.to_string());
+	}
+	return retval;
 	// how can I concat strings "fizz" + "buzz" so I can break the if-then-else chain?
 }
 
