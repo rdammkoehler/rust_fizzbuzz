@@ -10,7 +10,6 @@ fn fizzbuzz(num:u8) -> String {
 		retval.push_str(&num.to_string());
 	}
 	return retval;
-	// how can I concat strings "fizz" + "buzz" so I can break the if-then-else chain?
 }
 
 mod tests {
