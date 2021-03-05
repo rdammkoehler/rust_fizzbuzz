@@ -1,22 +1,15 @@
-fn main() {
-	// how do I not be a 'main' executable? [cargo target type I suspect]
-    println!("Hello, world!");
-}
-
-/// determine fizz, buzz, fizzbuzz, or number based on input
 fn fizzbuzz(num:u8) -> String {
-	let retval;
 	if num % 15 == 0 {
-		retval = String::from("fizzbuzz");
-	} else if num % 3 == 0 {
-		retval = String::from("fizz");
-	} else if num % 5 == 0 {
-		retval = String::from("buzz");
-	} else {
-		retval = num.to_string();
+		return String::from("fizzbuzz");
 	}
+	if num % 3 == 0 {
+		return String::from("fizz");
+	}
+	if num % 5 == 0 {
+		return String::from("buzz");
+	}
+	return num.to_string();
 	// how can I concat strings "fizz" + "buzz" so I can break the if-then-else chain?
-	return retval;
 }
 
 mod tests {
